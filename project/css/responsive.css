@@ -1,0 +1,156 @@
+/* ============================================
+   SHOE SACK — Responsive Breakpoints
+   Tablet, Mobile, Small Mobile
+   ============================================ */
+
+/* ---- Tablet (≤ 1024px) ---- */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 20px;
+        gap: 12px;
+    }
+
+    .nav-categories {
+        display: none;
+    }
+
+    .nav-search {
+        max-width: 300px;
+    }
+
+    .hero-carousel {
+        height: 300px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-slide {
+        padding: 0 36px;
+    }
+}
+
+/* ---- Mobile (≤ 768px) ---- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 16px;
+        gap: 8px;
+    }
+
+    .nav-search {
+        max-width: 200px;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .home-layout {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 14px;
+    }
+
+    .product-card-image {
+        height: 200px;
+    }
+
+    .hero-carousel {
+        height: 260px;
+        border-radius: 14px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-slide {
+        padding: 0 24px;
+    }
+
+    .cart-drawer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .product-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-detail-image-section {
+        height: 300px;
+        border-radius: 24px 24px 0 0;
+    }
+
+    .product-detail-info-section {
+        padding: 24px;
+    }
+}
+
+/* ---- Small Mobile (≤ 480px) ---- */
+@media (max-width: 480px) {
+    .nav-search {
+        display: none;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .main-content {
+        padding: 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .product-card-image {
+        height: 160px;
+    }
+
+    .product-card-info {
+        padding: 10px;
+    }
+
+    .product-card-name {
+        font-size: 0.82rem;
+    }
+
+    .product-card-price {
+        font-size: 1rem;
+    }
+
+    .hero-carousel {
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .hero-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-desc {
+        font-size: 0.85rem;
+    }
+
+    .hero-slide {
+        padding: 0 16px;
+    }
+
+    .auth-card {
+        padding: 24px;
+        margin: 16px;
+    }
+}

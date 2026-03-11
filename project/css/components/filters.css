@@ -1,0 +1,238 @@
+/* ============================================
+   SHOE SACK — Filter Sidebar Styles
+   Sort, gender, category, price, size, color, brand, rating
+   ============================================ */
+
+/* ---- Layout ---- */
+.main-content {
+    position: relative;
+    z-index: 1;
+    padding: 24px 32px;
+    padding-top: 0;
+}
+
+.home-layout {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+/* ---- Sidebar ---- */
+.filter-sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    position: sticky;
+    top: calc(var(--nav-height) + 24px);
+    max-height: calc(100vh - var(--nav-height) - 48px);
+    overflow-y: auto;
+    padding: 20px;
+    scrollbar-width: thin;
+}
+
+/* ---- Sections ---- */
+.filter-section {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.filter-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-section-title {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+}
+
+.filter-toggle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.filter-toggle.collapsed {
+    transform: rotate(-90deg);
+}
+
+.filter-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-section-body.collapsed {
+    display: none;
+}
+
+/* ---- Checkboxes / Radios ---- */
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0;
+    cursor: pointer;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.filter-checkbox:hover {
+    color: var(--text-primary);
+}
+
+.filter-checkbox input[type="checkbox"],
+.filter-checkbox input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--glass-border-strong);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.filter-checkbox input[type="radio"] {
+    border-radius: 50%;
+}
+
+.filter-checkbox input:checked {
+    background: var(--accent-gradient);
+    border-color: var(--accent-2);
+}
+
+.filter-checkbox input:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ---- Price Slider ---- */
+.filter-price-range {
+    width: 100%;
+}
+
+.filter-price-range input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: var(--glass-border);
+    border-radius: 2px;
+    outline: none;
+    margin: 8px 0;
+}
+
+.filter-price-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(229, 62, 62, 0.4);
+    border: 2px solid #fff;
+}
+
+.filter-price-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ---- Size Chips ---- */
+.filter-size-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.size-chip {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.size-chip:hover {
+    border-color: var(--accent-2);
+    color: var(--text-primary);
+}
+
+.size-chip.active {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    color: #fff;
+}
+
+/* ---- Color Swatches ---- */
+.filter-color-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.color-swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition-fast);
+    position: relative;
+}
+
+.color-swatch:hover {
+    transform: scale(1.15);
+}
+
+.color-swatch.active {
+    border-color: var(--accent-2);
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.3);
+}
+
+/* ---- Clear Button ---- */
+.filter-clear-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--danger);
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    transition: var(--transition-fast);
+}
+
+.filter-clear-btn:hover {
+    background: rgba(239, 68, 68, 0.15);
+}

@@ -1,0 +1,180 @@
+/* ============================================
+   SHOE SACK — PWA Install Banner & iOS Modal
+   ============================================ */
+
+.pwa-install-banner {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: linear-gradient(135deg, #1a1a1a, #242424);
+    border: 1px solid rgba(229, 62, 62, 0.3);
+    border-radius: 16px;
+    padding: 16px 24px;
+    max-width: 420px;
+    width: calc(100% - 32px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(229, 62, 62, 0.15);
+    backdrop-filter: blur(20px);
+    animation: slideUpBanner 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pwa-install-banner.show {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.pwa-install-banner .pwa-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e53e3e, #9b2c2c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.pwa-install-banner .pwa-text {
+    flex: 1;
+}
+
+.pwa-install-banner .pwa-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #f5f5f5;
+    margin-bottom: 2px;
+}
+
+.pwa-install-banner .pwa-desc {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+.pwa-install-banner .pwa-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.pwa-install-banner .pwa-install-btn {
+    padding: 8px 18px;
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pwa-install-banner .pwa-install-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+.pwa-install-banner .pwa-dismiss {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pwa-install-banner .pwa-dismiss:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes slideUpBanner {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ---- iOS Install Instructions Modal ---- */
+.ios-install-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ios-install-modal.show {
+    display: flex;
+}
+
+.ios-install-content {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 28px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    animation: slideUpBanner 0.4s ease;
+}
+
+.ios-install-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #f5f5f5;
+}
+
+.ios-install-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ios-install-step:last-child {
+    border-bottom: none;
+}
+
+.ios-install-step .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ios-install-close {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #f5f5f5;
+    font-size: 0.9rem;
+    cursor: pointer;
+}

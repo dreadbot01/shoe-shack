@@ -1,0 +1,41 @@
+/* ============================================
+   SHOE SACK — Master Stylesheet
+   Imports all modular CSS files
+   ============================================
+   
+   File Structure:
+   css/
+   ├── style.css              ← This file (entry point)
+   ├── responsive.css         ← Breakpoints
+   ├── base/
+   │   ├── tokens.css         ← Design tokens / CSS variables
+   │   ├── reset.css          ← Universal reset & base
+   │   └── utilities.css      ← Glass, buttons, inputs, animations
+   └── components/
+       ├── navbar.css          ← Sticky nav, search, dropdown
+       ├── hero.css            ← Hero banner carousel
+       ├── filters.css         ← Sidebar filters + layout
+       ├── products.css        ← Product grid, cards, detail modal
+       ├── cart.css            ← Cart drawer
+       ├── auth.css            ← Login / signup page
+       ├── toast.css           ← Toast notifications
+       └── pwa.css             ← PWA install banner & iOS modal
+   ============================================ */
+
+/* ---------- Foundation ---------- */
+@import url('base/tokens.css');
+@import url('base/reset.css');
+@import url('base/utilities.css');
+
+/* ---------- Components ---------- */
+@import url('components/navbar.css');
+@import url('components/hero.css');
+@import url('components/filters.css');
+@import url('components/products.css');
+@import url('components/cart.css');
+@import url('components/auth.css');
+@import url('components/toast.css');
+@import url('components/pwa.css');
+
+/* ---------- Responsive ---------- */
+@import url('responsive.css');

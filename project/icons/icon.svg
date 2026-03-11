@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0a0a0a"/>
+  <g transform="translate(80, 140) scale(0.7)">
+    <path d="M50 280 C50 280 80 200 150 180 C220 160 260 170 300 160 C340 150 380 120 420 100 C440 90 460 95 460 115 C460 135 440 160 420 170 C380 190 340 200 300 210 C260 220 220 230 180 250 C140 270 100 290 80 300 C60 310 50 300 50 280Z" fill="none" stroke="#e53e3e" stroke-width="8"/>
+    <path d="M50 280 C50 280 80 200 150 180 C220 160 260 170 300 160 C340 150 380 120 420 100 C440 90 460 95 460 115 C460 135 440 160 420 170 C380 190 340 200 300 210 C260 220 220 230 180 250 C140 270 100 290 80 300 C60 310 50 300 50 280Z" fill="#e53e3e" opacity="0.15"/>
+    <ellipse cx="260" cy="310" rx="210" ry="20" fill="#1a1a1a"/>
+    <path d="M60 280 L80 290 L160 270 L260 255 L360 240 L420 230 L460 220" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.6"/>
+    <circle cx="140" cy="290" r="6" fill="#ffffff" opacity="0.8"/>
+    <circle cx="200" cy="275" r="6" fill="#ffffff" opacity="0.8"/>
+    <circle cx="260" cy="262" r="6" fill="#ffffff" opacity="0.8"/>
+    <circle cx="320" cy="248" r="6" fill="#ffffff" opacity="0.8"/>
+  </g>
+  <text x="256" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="64" fill="#ffffff" letter-spacing="-2">SOLE</text>
+  <text x="256" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="64" fill="#e53e3e" letter-spacing="-2" opacity="0">VAULT</text>
+</svg>

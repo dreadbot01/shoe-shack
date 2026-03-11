@@ -1,0 +1,72 @@
+{
+    "name": "SHOE SACK — Premium Shoe Store",
+    "short_name": "SHOE SACK",
+    "description": "Shop the latest sneakers, running shoes, boots, and more from top brands.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#0a0a0a",
+    "orientation": "any",
+    "lang": "en",
+    "dir": "ltr",
+    "categories": [
+        "shopping",
+        "lifestyle"
+    ],
+    "icons": [
+        {
+            "src": "icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Browse Shoes",
+            "short_name": "Browse",
+            "description": "Browse trending shoes",
+            "url": "/?view=home",
+            "icons": [
+                {
+                    "src": "icons/icon.svg",
+                    "sizes": "any"
+                }
+            ]
+        },
+        {
+            "name": "My Cart",
+            "short_name": "Cart",
+            "description": "View your shopping cart",
+            "url": "/?view=cart",
+            "icons": [
+                {
+                    "src": "icons/icon.svg",
+                    "sizes": "any"
+                }
+            ]
+        },
+        {
+            "name": "My Profile",
+            "short_name": "Profile",
+            "description": "Manage your profile and orders",
+            "url": "/?view=profile",
+            "icons": [
+                {
+                    "src": "icons/icon.svg",
+                    "sizes": "any"
+                }
+            ]
+        }
+    ],
+    "screenshots": [],
+    "related_applications": [],
+    "prefer_related_applications": false
+}
